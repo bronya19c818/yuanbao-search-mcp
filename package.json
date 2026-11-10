@@ -1,0 +1,51 @@
+{
+  "name": "yuanbao-search-mcp",
+  "version": "1.0.0",
+  "description": "腾讯云元宝搜索（WSA SearchPro）的 MCP Server：中文资讯、新闻、攻略、百科与实时热点检索。",
+  "type": "module",
+  "bin": {
+    "yuanbao-search-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/index.js",
+    "smoke": "npm run build && node scripts/smoke.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "yuanbao",
+    "tencent",
+    "search",
+    "元宝搜索",
+    "wsa"
+  ],
+  "author": "bronya19c818",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bronya19c818/yuanbao-search-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bronya19c818/yuanbao-search-mcp/issues"
+  },
+  "homepage": "https://github.com/bronya19c818/yuanbao-search-mcp#readme",
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.4.0",
+    "zod": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.9.3"
+  }
+}
